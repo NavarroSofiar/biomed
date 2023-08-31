@@ -1,0 +1,27 @@
+.form-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin:30px auto;
+  min-height: 50px;
+  color: rgb(0, 0, 0);
+  background: radial-gradient(100% 100% at 100% 0%, #7c7f8080 0%, #9193a089 100%);
+  box-shadow: 1px 2px 4px rgba(45, 35, 66, 0.637), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+  text-decoration: none
+  
+}
+
+
+.form-order input {
+  justify-content: center;
+  width: 30%;
+  margin: 10px auto;
+}
+
+.form-order button {
+  text-align: center;
+  justify-content: center;
+  width: 50px;
+  margin: 10px auto;
+}
