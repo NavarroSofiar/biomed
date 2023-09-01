@@ -94,6 +94,11 @@ class JobModel {
         };
     }
 
+    async getByName(name) {
+    const regex = new RegExp(name, 'i'); 
+    return await this.model.find({ name: { $regex: regex }, deleted_at: null });
+  }
+
 }
 
 module.exports = new JobModel();

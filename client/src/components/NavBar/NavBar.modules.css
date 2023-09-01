@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Roboto:ital,wght@1,100&family=Rubik+Moonrocks&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+NSW+ACT+Foundation&family=Roboto:ital,wght@1,100&display=swap');
+
+.navbarbiomed{
+    background-color: #511661;
+    color: #fff;
+}
+
+.titlebiomed{
+    color: #fff;
+}
+.btn-Withoutblue{
+    color: #fff;
+    
+    text-decoration: none;
+}
+.btn-Withoutblue:hover{
+    color: black;
+    
+}
+
 .containerDiv{
     display: flex;
     justify-content: space-between;

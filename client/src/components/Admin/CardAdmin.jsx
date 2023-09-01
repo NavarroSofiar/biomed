@@ -11,34 +11,37 @@ const CardAdmin = ({ id, name, job_title, experience, location }) => {
 
     const handleDelete = () => {
         dispatch(deleteJob(id))
-    setTimeout(() => {
-        navigate('/admin')
-    }, 1000)
-    swal({
-        title: 'Job deleted successfully!',
-        icon: "success",
-        button: "Ok"
-    })
+        setTimeout(() => {
+            navigate('/admin')
+        }, 1000)
+        swal({
+            title: 'Job deleted successfully!',
+            icon: "success",
+            button: "Ok"
+        })
         //window.location.reload()
         //window.scrollTo(0, 0);
         setTimeout(() => {
             window.location.reload()
-            }, 2000)
+        }, 2000)
     }
     return (
         <div className='container ad'>
-            <div className='jobCard admin'>
-                <Link className='cardadmin' to={`/admin/jobs/${id}`}>
-                    <h2>{name} </h2>
-                    <h3>{job_title}</h3>
-                    <h6>{experience}</h6>
-                    <p>{location}</p>
+            <div className='card custom-background border-light mb-3'>
+                <Link to={`/api/jobs/${id}`} className="custom-link">
+                    <div class="card-header">{name}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{job_title}</h5>
+                        <h6>{experience}</h6>
+                        <p class="card-text">{location}</p>
+                    </div>
                 </Link>
-                <button className='btndelete' onClick={handleDelete} >X</button>
+
+                <button className='btn-secondary btndelete' onClick={handleDelete} >X</button>
 
 
                 <Link to={`/admin/editjobs/${id}`}>
-                    <button className='btnReload edit' >Edit</button>
+                    <button className='edit btn btn-secondary' >Edit</button>
                 </Link>
 
 

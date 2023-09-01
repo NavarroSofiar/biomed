@@ -46,7 +46,7 @@ const Detail = () => {
      :
      <div>Loading</div>
      }
-     <button className='btnReload' onClick={handleOnclick}>Apply</button>
+     <button type="button" class="btn btn-secondary btn-apply" onClick={handleOnclick}>Apply</button>
     </div>
     
   )

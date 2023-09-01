@@ -70,6 +70,21 @@ const jobsController = {
             handleHttpError(res, "ERROR_DELETED_JOB", e);
         }
     },
+
+    getItemByName: async (req, res) => {
+        const { name } = req.params;
+        try {
+          const item = await jobsModel.getByName(name);
+          if (item) {
+            res.status(200).send(item);
+          } else {
+            handleHttpError(res, 'JOB_NOT_FOUND', 404);
+          }
+        } catch (e) {
+          console.error(e);
+          handleHttpError(res, 'ERROR_IN_SEARCH_BY_NAME', 500);
+        }
+      },
 };
 
 

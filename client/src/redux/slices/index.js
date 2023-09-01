@@ -17,8 +17,11 @@ export const state = createSlice({
     changeLoading: (state, action) => {
       state.loading = action.payload
     },
+    getJobByName:(state, action) => {
+      state.loading = action.payload
+    },
   }
 }
 )
-export const { getAlljobs, getJobById,changeLoading } = state.actions
+export const { getAlljobs, getJobById,changeLoading, getJobByName } = state.actions
 export default state.reducer
